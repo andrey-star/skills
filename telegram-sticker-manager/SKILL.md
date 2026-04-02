@@ -25,6 +25,7 @@ All video stickers MUST adhere to these limits:
 - `TELEGRAM_BOT_TOKEN`: Must be available in the environment.
 - `USER_ID`: `260367801` (Andrey).
 - `PACK_NAME`: `andreys_pack_by_fastrazor_bot`.
+- **Tools:** `ffmpeg`, `ffprobe`, `curl`, `jq`. (Ensure these are installed and in the PATH).
 
 ## Workflow for Adding a New Sticker
 
