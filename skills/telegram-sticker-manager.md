@@ -1,3 +1,8 @@
+---
+name: telegram-sticker-manager
+description: Manage and update the 'Andrey Pack' Telegram sticker set. Use this skill whenever the user provides an image, GIF, or video and wants to add it to their Telegram stickers, or when they want to modify the existing 'Andrey Pack'. This skill handles the strict Telegram technical requirements (VP9 WebM, 3s limit, 512x512, <256KB) automatically.
+---
+
 # Telegram Sticker Management Skill
 
 This skill allows an agent to programmatically manage Telegram Video Sticker packs using the Telegram Bot API.
@@ -58,10 +63,10 @@ ffmpeg -i input_file -vf "setpts=(min(3,d)/d)*PTS,scale=512:512:force_original_a
 ### 3. Execution (API Call)
 Add the transformed sticker to the pack:
 ```bash
-curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" \
-     -F "user_id=260367801" \
-     -F "name=andreys_pack_by_fastrazor_bot" \
-     -F "sticker={\"sticker\":\"attach://sticker_file\", \"emoji_list\":[\"🚀\"]}" \
+curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" 
+     -F "user_id=260367801" 
+     -F "name=andreys_pack_by_fastrazor_bot" 
+     -F "sticker={"sticker":"attach://sticker_file", "emoji_list":["🚀"]}" 
      -F "sticker_file=@/path/to/sticker.webm"
 ```
 
