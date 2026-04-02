@@ -60,9 +60,13 @@ ffmpeg -i input_file -vf "setpts=(min(3,d)/d)*PTS,scale=512:512:force_original_a
 - **To make it exactly 3 seconds (without speeding up):**
   Use `-t 3` at the end to truncate the clip.
 
-### 3. Execution (API Call)
-**Ask the user which emojis should be associated with this sticker.** 
-Once confirmed, add the transformed sticker to the pack:
+### 3. Emoji Selection
+- **Analyze Media:** Use `read_file` to view the image/video.
+- **Suggest Emojis:** Based on the visual content, suggest 3-5 relevant emojis to the user.
+- **User Confirmation:** Wait for the user to either pick from your suggestions or provide their own. **Do NOT proceed without a confirmed emoji.**
+
+### 4. Execution (API Call)
+Once the emoji and the transformed file are ready, add the sticker to the pack:
 ```bash
 curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" \
      -F "user_id=260367801" \
