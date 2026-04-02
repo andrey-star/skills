@@ -61,12 +61,13 @@ ffmpeg -i input_file -vf "setpts=(min(3,d)/d)*PTS,scale=512:512:force_original_a
   Use `-t 3` at the end to truncate the clip.
 
 ### 3. Execution (API Call)
-Add the transformed sticker to the pack:
+**Ask the user which emojis should be associated with this sticker.** 
+Once confirmed, add the transformed sticker to the pack:
 ```bash
-curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" 
-     -F "user_id=260367801" 
-     -F "name=andreys_pack_by_fastrazor_bot" 
-     -F "sticker={"sticker":"attach://sticker_file", "emoji_list":["🚀"]}" 
+curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" \
+     -F "user_id=260367801" \
+     -F "name=andreys_pack_by_fastrazor_bot" \
+     -F "sticker={\"sticker\":\"attach://sticker_file\", \"emoji_list\":[\"EMOJI_HERE\"]}" \
      -F "sticker_file=@/path/to/sticker.webm"
 ```
 
