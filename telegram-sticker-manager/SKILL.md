@@ -72,7 +72,7 @@ Once the emoji and the transformed file are ready, add the sticker to the pack:
 curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/addStickerToSet" \
      -F "user_id=260367801" \
      -F "name=andreys_pack_by_fastrazor_bot" \
-     -F "sticker={\"sticker\":\"attach://sticker_file\", \"emoji_list\":[\"EMOJI_HERE\"]}" \
+     -F "sticker={\"sticker\":\"attach://sticker_file\", \"emoji_list\":[\"EMOJI_HERE\"], \"format\":\"video\"}" \
      -F "sticker_file=@/path/to/sticker.webm"
 ```
 
