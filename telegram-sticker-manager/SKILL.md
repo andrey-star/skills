@@ -1,6 +1,6 @@
 ---
 name: telegram-sticker-manager
-description: Manage and update the 'Andrey Pack' Telegram sticker set. Use this skill whenever the user provides an image, GIF, or video and wants to add it to their Telegram stickers, or when they want to modify the existing 'Andrey Pack'. This skill handles the strict Telegram technical requirements (VP9 WebM, 3s limit, 512x512, <256KB) automatically.
+description: Manage the 'Andrey's Pack' Telegram sticker set. Use to add or modify stickers from images, GIFs, or videos. Handles all Telegram formatting constraints automatically.
 ---
 
 # Telegram Sticker Management Skill
