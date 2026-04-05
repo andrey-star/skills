@@ -3,9 +3,9 @@ name: telegram-sticker-manager
 description: Manage the 'Andrey's Pack' Telegram sticker set. Use to add or modify stickers from images, GIFs, or videos. Handles all Telegram formatting constraints automatically.
 ---
 
-# Telegram Sticker Management Skill
+# [Andrey's Pack](https://t.me/addstickers/andreys_pack_by_fastrazor_bot) Telegram Sticker Management Skill
 
-This skill allows an agent to programmatically manage Telegram Video Sticker packs using the Telegram Bot API.
+This skill allows an agent to programmatically manage [Andrey's Pack](https://t.me/addstickers/andreys_pack_by_fastrazor_bot) using the Telegram Bot API.
 
 ## Core Capabilities
 - **Validation:** Check if media files meet Telegram's strict technical requirements.
